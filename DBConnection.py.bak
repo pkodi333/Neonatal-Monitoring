@@ -1,0 +1,8 @@
+import mysql.connector
+class DBConnection:
+    @staticmethod
+    def getConnection():
+        database = mysql.connector.connect(host="185.28.23.173", user="ctcorphy_crop", passwd="crop@1234", db='ctcorphy_crop')
+        return database
+if __name__=="__main__":
+    print(DBConnection.getConnection())
